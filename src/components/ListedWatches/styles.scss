@@ -1,0 +1,81 @@
+#listedWatches {
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        h1 {
+            color: var(--text);
+            font-size: 2.5rem;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border: 1px solid var(--text-light);
+            color: var(--text);
+            background-color: var(--white);
+            border-radius: 1.5rem;
+            height: 3rem;
+            padding: 0 2rem;
+            transition: filter 0.2s;
+
+            &:hover {
+                filter: brightness(0.8);
+            }
+        }
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        row-gap: 3rem;
+
+        @media (max-width: 1440px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    
+        @media (max-width: 720px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .listedWatch {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .buttons {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                justify-content: center;
+
+                button {
+                    border: 1px solid var(--text-light);
+                    color: var(--text);
+                    background-color: var(--white);
+                    border-radius: 1.5rem;
+                    height: 3rem;
+                    padding: 0 2rem;
+                    transition: filter 0.2s;
+    
+                    &:hover {
+                        filter: brightness(0.8);
+                    }
+    
+                    &:last-child {
+                        border: 0;
+                        color: var(--white);
+                        background-color: var(--text);
+                    }
+                }
+            }
+        }
+    }
+}

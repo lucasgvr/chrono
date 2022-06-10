@@ -1,0 +1,60 @@
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    background-color: var(--background);
+
+    h1 {
+        color: var(--text);
+        font-size: 2.2rem;
+        cursor: pointer;
+    }
+
+    nav {
+        display: flex;
+        gap: 1.5rem;
+        
+        p {
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            font-size: 1rem;
+            align-items: center;
+            transition: filter 0.2s;
+
+            &:last-child {
+                color: var(--white);
+                background-color: var(--text);
+                border-radius: 1.5rem;
+                height: 3rem;
+                padding: 0 2rem;
+            }
+
+            &:hover {
+                filter: brightness(0.6);
+            }
+        }
+    }
+
+    div {
+        background-color: var(--white);
+        border-radius: 1.5rem;
+        height: 3rem;
+        padding: 0 1rem;
+
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        button {
+            border: 0;
+            background-color: var(--white);
+
+            &:first-child {
+                margin-top: 5px;
+            }
+        }
+    }
+}
